@@ -1,16 +1,13 @@
 import React from 'react';
 import { useRef } from 'react';
 import { EARTH_CENTER, EARTH_RADIUS } from '../../constans';
-import { IAttractionProps } from '../../types';
+import { IAttractionMarkerProps } from '../../types';
 import * as THREE from 'three'
 import { useEffect } from 'react';
 import { Group } from 'three';
 import GeometryHelper from '../../helpers/geometryHelper';
-import { Color } from '@react-three/fiber';
 
-
-
-const Attraction: React.FC<IAttractionProps> = (data) => {
+const AttractionMarker: React.FC<IAttractionMarkerProps> = (data) => {
     const rotationRef = useRef<Group>();
 
     useEffect(() => {
@@ -18,7 +15,7 @@ const Attraction: React.FC<IAttractionProps> = (data) => {
     }, [])
 
     return (
-        <group ref={rotationRef} position={EARTH_CENTER} >
+        <group ref={rotationRef}>
             <group position={[0, EARTH_RADIUS, 0]}>
                 <mesh>
                     <boxGeometry args={[0.1, 0.2, 0.1]}></boxGeometry>
@@ -29,4 +26,4 @@ const Attraction: React.FC<IAttractionProps> = (data) => {
     );
 }
 
-export default Attraction;
+export default AttractionMarker;

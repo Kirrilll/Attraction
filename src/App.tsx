@@ -3,12 +3,13 @@ import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
 import React from 'react';
 import Earth from './components/earth/Earth';
-import { IAttractionProps } from './types';
+import { IAttractionMarkerProps } from './types';
+import EarthScene from './components/earth-scene/earthScene';
 
 
 function App() {
 
-  const data: Array<IAttractionProps> = [
+  const data: Array<IAttractionMarkerProps> = [
     {coordinates: {latitude: 0, longitude: 0}, color: 'hotpink'},
     {coordinates: {latitude: 40.7143, longitude: -74.006}, color: 'skyblue'},
     {coordinates: {latitude: 48.8534100, longitude: 2.3488000}, color: 'red'},
@@ -19,9 +20,10 @@ function App() {
     <>
       <Canvas>
         <spotLight intensity={1} position={[2, 0, 5]}></spotLight>
-        <Suspense fallback = {null}>
+        {/* <Suspense fallback = {null}>
           <Earth attractions = {data}></Earth>
-        </Suspense>
+        </Suspense> */}
+        <EarthScene></EarthScene>
       </Canvas>
     </>
 
