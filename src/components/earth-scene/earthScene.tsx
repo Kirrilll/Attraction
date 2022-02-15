@@ -1,4 +1,4 @@
-import { Html } from '@react-three/drei';
+import { Html, OrbitControls } from '@react-three/drei';
 import React, { Suspense } from 'react';
 import { IAttractionMarkerProps, INavPanelItem } from '../../types';
 import Earth from '../earth/Earth';
