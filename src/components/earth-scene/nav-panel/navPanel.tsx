@@ -5,12 +5,13 @@ import './navPanel.css'
 
 
 interface INavPanel {
-    navPanelItems: Array<INavPanelItem>
+    navPanelItems: Array<INavPanelItem>;
+    setRotation: (x:number, y:number) => void;
 }
 
 const NavPanel: React.FC<INavPanel> = (props) => {
 
-    const navPanelItems: Array<JSX.Element> = props.navPanelItems.map((item, index) => <NavPanelItem navPanelItem = {item} key = {index}>
+    const navPanelItems: Array<JSX.Element> = props.navPanelItems.map((item, index) => <NavPanelItem navPanelItem = {item} key = {index} setRotation = {props.setRotation}>
     </NavPanelItem>)
 
     return (
