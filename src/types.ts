@@ -1,6 +1,7 @@
 import { Color } from "@react-three/fiber";
 import { ArrowFunction, FunctionDeclaration } from "typescript";
 import { SpringRef, SpringValue } from "@react-spring/core";
+import React from "react";
 
 export interface ISpring {
   scale: SpringValue<number>;
@@ -26,6 +27,7 @@ export interface ICoordinates {
 export interface IAttractionMarkerProps {
   coordinates: ICoordinates;
   color: Color;
+  child: React.ReactNode;
 }
 
 export interface INavPanelItem {

@@ -1,6 +1,9 @@
 import { Vector3 } from "three";
 import { ISpring, ISpringConfig } from "./types";
 
+
+export const PATH_TO_LOWPOLY_MODELS: string = '../../../models/lowpoly/';
+
 //Радиус Земли
 export const EARTH_RADIUS: number = 2;
 
@@ -8,7 +11,7 @@ export const EARTH_RADIUS: number = 2;
 export const EARTH_CENTER: Vector3 = new Vector3(2, 0, 0);
 
 //Показывает пропорцию достпримечастелности относительно Земли
-export const ATTRACTION_RATIO: number = 1 / 1000;
+export const ATTRACTION_RATIO: number = 1/1000 * EARTH_RADIUS;
 
 //Верхняя граница поворота по вертикали
 export const minPolar: number = -Infinity;

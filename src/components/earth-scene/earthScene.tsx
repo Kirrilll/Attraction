@@ -6,6 +6,10 @@ import NavPanel from './nav-panel/navPanel';
 import { useSpring, a } from "@react-spring/three";
 import { ArrowFunction, FunctionExpression } from 'typescript';
 import { springConfig } from '../../constans';
+import BigBen from '../models/BigBen';
+import SpasskayTower from '../models/SpasskayTower';
+import TowerOfPisa from '../models/TowerOfPisa';
+import SydneyOperaHouse from '../models/SydneyOperaHouse';
 
 const EarthScene: React.FC = () => {
 
@@ -22,10 +26,10 @@ const EarthScene: React.FC = () => {
     };
 
     const data: Array<IAttractionMarkerProps> = [
-        { coordinates: { latitude: 0, longitude: 0 }, color: 'hotpink' },
-        { coordinates: { latitude: 40.7143, longitude: -74.006 }, color: 'skyblue' },
-        { coordinates: { latitude: 48.8534100, longitude: 2.3488000 }, color: 'red' },
-        { coordinates: { latitude: 43.7229843, longitude: 10.3966227 }, color: 'yellow' },
+        { coordinates: { latitude: 0, longitude: 0 }, color: 'hotpink', child: <BigBen></BigBen> },
+        { coordinates: { latitude: 40.7143, longitude: -74.006 }, color: 'skyblue', child: <SpasskayTower></SpasskayTower> },
+        { coordinates: { latitude: 48.8534100, longitude: 2.3488000 }, color: 'red', child: <TowerOfPisa></TowerOfPisa> },
+        { coordinates: { latitude: 43.7229843, longitude: 10.3966227 }, color: 'yellow', child: <SydneyOperaHouse></SydneyOperaHouse> },
     ];
 
     const buttons: Array<INavPanelItem> = [
@@ -39,7 +43,7 @@ const EarthScene: React.FC = () => {
             <Html position={[-2, 0, 0]}>
                 <NavPanel navPanelItems={buttons} setRotation={setRotation}></NavPanel>
             </Html>
-            <Earth attractions={data} spring={spring} setRotation={setRotation}></Earth>
+           <Earth attractions={data} spring={spring} setRotation={setRotation}></Earth> 
         </Suspense>
 
     )

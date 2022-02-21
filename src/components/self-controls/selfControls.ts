@@ -11,6 +11,7 @@ import { maxAzimuth, maxPolar, minAimuth, minPolar } from "../../constans";
 interface ISelfControlsProp{
   rotation?: {x:number, y:number, z:number},
   children?: React.ReactNode,
+  global?: boolean, 
   spring: ISpring,
   setRotation: (x: number, y:number) => void,
   speed?: number
@@ -24,6 +25,7 @@ interface IMinMax{
 const SelfControls: React.FC<ISelfControlsProp> = ({
   speed =1,
   rotation = {x:0, y: 0, z: 0},
+  global = false,
   setRotation,
   spring,
   children
