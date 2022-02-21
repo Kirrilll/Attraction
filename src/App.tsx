@@ -19,10 +19,7 @@ function App() {
   return (
     <>
       <Canvas>
-        <spotLight intensity={1} position={[2, 0, 5]}></spotLight>
-        {/* <Suspense fallback = {null}>
-          <Earth attractions = {data}></Earth>
-        </Suspense> */}
+        <spotLight intensity={1} position={[1, 0, 10]}></spotLight>
         <EarthScene></EarthScene>
       </Canvas>
     </>

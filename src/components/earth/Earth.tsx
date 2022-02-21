@@ -3,11 +3,11 @@ import { IAttractionMarkerProps, ISpring } from '../../types';
 import Attraction from '../attraction-view/attractionView';
 import * as THREE from 'three';
 import { useTexture } from '@react-three/drei';
-import EarthColorMap from '../../assets/textures/Earth/8k_earth_daymap.jpg';
+import EarthColorMap from '../../assets/textures/Earth/Earth_colorMap.png';
+import EarthNormalMap from '../../assets/textures/Earth/Earth_normalMap.jpg'
 import { EARTH_CENTER, EARTH_RADIUS } from '../../constans';
 import AttractionMarker from '../attracttion-marker/attractionMarker';
 import SelfControls from '../self-controls/selfControls';
-import { useRef } from 'react';
 
 interface IEarthProps {
     attractions: Array<IAttractionMarkerProps>,
@@ -17,7 +17,7 @@ interface IEarthProps {
 
 const Earth: React.FC<IEarthProps> = (data) => {
 
-    const colorMap = useTexture(EarthColorMap);
+    const [colorMap, normalMap] = useTexture([EarthColorMap, EarthNormalMap]);
 
     const attComponents: Array<JSX.Element> = data.attractions
         .map(attration => <AttractionMarker coordinates={attration.coordinates} color={attration.color}></AttractionMarker>)
@@ -28,7 +28,7 @@ const Earth: React.FC<IEarthProps> = (data) => {
                 <SelfControls setRotation = {data.setRotation} spring = {data.spring}>
                     <mesh>
                         <sphereGeometry args={[EARTH_RADIUS, 32, 32]}></sphereGeometry>
-                        <meshStandardMaterial map={colorMap}></meshStandardMaterial>
+                        <meshStandardMaterial map={colorMap} normalMap = {normalMap}></meshStandardMaterial>
                     </mesh>
                     {attComponents}
                 </SelfControls>

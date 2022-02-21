@@ -9,13 +9,6 @@ import { springConfig } from '../../constans';
 
 const EarthScene: React.FC = () => {
 
-
-    const minPolar: number = 0;
-    const maxPolar: number = Math.PI / 2;
-
-    const minAimuth: number = -Infinity;
-    const maxAzimuth: number = Infinity;
-
     const [spring, api] = useSpring(() => ({
         ...springConfig
     }));
@@ -47,7 +40,6 @@ const EarthScene: React.FC = () => {
                 <NavPanel navPanelItems={buttons} setRotation={setRotation}></NavPanel>
             </Html>
             <Earth attractions={data} spring={spring} setRotation={setRotation}></Earth>
-
         </Suspense>
 
     )
