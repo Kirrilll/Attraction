@@ -7,7 +7,6 @@ function App() {
   return (
     <>
       <Canvas>
-        <spotLight intensity={1} position={[1, 0, 10]}></spotLight>
         <SceneManager></SceneManager>
       </Canvas>
     </>
