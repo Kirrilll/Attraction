@@ -15,6 +15,7 @@ const SceneManager: React.FC = () => {
     }, [])
 
     return (
+        
             <Suspense fallback={null}>
                 {child}    
             </Suspense>

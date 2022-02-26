@@ -10,6 +10,14 @@ import BigBen from '../models/BigBen';
 import SpasskayTower from '../models/SpasskayTower';
 import TowerOfPisa from '../models/TowerOfPisa';
 import SydneyOperaHouse from '../models/SydneyOperaHouse';
+import { Canvas } from '@react-three/fiber';
+
+
+interface IDataItem{
+    title: String,
+
+}
+
 
 const EarthScene: React.FC<{ setChild: (child: React.ReactNode) => void }> = (props) => {
 
@@ -25,46 +33,51 @@ const EarthScene: React.FC<{ setChild: (child: React.ReactNode) => void }> = (pr
         });
     };
 
+    //Вынести это куда-то
+    //научиться рендерить по ссылке на модель
     const data: Array<IAttractionMarkerProps> = [
         {
             coordinates: { latitude: 0, longitude: 0 },
             lowPolyModel: <BigBen></BigBen>,
             highPolyModel: <BigBen></BigBen>,
-            setChild: props.setChild
+            setChild: props.setChild,
+            title: 'Биг-Бен'
         },
         {
             coordinates: { latitude: 40.7143, longitude: -74.006 },
             lowPolyModel: <SpasskayTower></SpasskayTower>,
             highPolyModel: <SpasskayTower></SpasskayTower>,
-            setChild: props.setChild
+            setChild: props.setChild,
+            title: 'Спасская башня'
         },
         {
             coordinates: { latitude: 48.8534100, longitude: 2.3488000 },
             lowPolyModel: <TowerOfPisa></TowerOfPisa>,
             highPolyModel: <TowerOfPisa></TowerOfPisa>,
-            setChild: props.setChild
+            setChild: props.setChild,
+            title: 'Пизанская башня'
         },
         {
             coordinates: { latitude: 43.7229843, longitude: 10.3966227 },
             lowPolyModel: <SydneyOperaHouse></SydneyOperaHouse>,
             highPolyModel: <SydneyOperaHouse></SydneyOperaHouse>,
-            setChild: props.setChild
+            setChild: props.setChild,
+            title: 'Оперный театр'
         },
     ];
 
-    const buttons: Array<INavPanelItem> = [
-        { coordinates: { latitude: 0, longitude: 0 }, title: 'Экватор' },
-        { coordinates: { latitude: 40.7143, longitude: -74.006 }, title: 'Экватор' },
-        { coordinates: { latitude: 48.8534100, longitude: 2.3488000 }, title: 'Экватор' }
-    ]
+    const buttons: Array<INavPanelItem> = data.map(item => ({coordinates: item.coordinates, title: item.title}));
 
     return (
         <>
+        <Canvas>
             <spotLight intensity={1} position={[1, 0, 10]}></spotLight>
             <Html position={[-2, 0, 0]}>
                 <NavPanel navPanelItems={buttons} setRotation={setRotation}></NavPanel>
             </Html>
             <Earth attractions={data} spring={spring} setRotation={setRotation}></Earth>
+        </Canvas>
+            
         </>
 
     )
