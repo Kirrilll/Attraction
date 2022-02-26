@@ -1,4 +1,4 @@
-import { Html, OrbitControls } from '@react-three/drei';
+import { Environment, Html, OrbitControls } from '@react-three/drei';
 import React, { Suspense } from 'react';
 import { IAttractionMarkerProps, INavPanelItem } from '../../types';
 import Earth from './earth/Earth';
@@ -12,6 +12,7 @@ import TowerOfPisa from '../models/TowerOfPisa';
 import SydneyOperaHouse from '../models/SydneyOperaHouse';
 import { Canvas } from '@react-three/fiber';
 
+import BACKROUDN from '../../assets/sprites/background/background.jpeg'
 
 interface IDataItem{
     title: String,
@@ -72,7 +73,7 @@ const EarthScene: React.FC<{ setChild: (child: React.ReactNode) => void }> = (pr
         <>
         <Canvas>
             <spotLight intensity={1} position={[1, 0, 10]}></spotLight>
-            <Html position={[-2, 0, 0]}>
+            <Html position={[-4, 3, 0]}>
                 <NavPanel navPanelItems={buttons} setRotation={setRotation}></NavPanel>
             </Html>
             <Earth attractions={data} spring={spring} setRotation={setRotation}></Earth>

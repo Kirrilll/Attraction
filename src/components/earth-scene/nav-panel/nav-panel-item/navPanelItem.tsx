@@ -2,6 +2,7 @@ import React from 'react';
 import { useContext } from 'react';
 import GeometryHelper from '../../../../helpers/geometryHelper';
 import { INavPanelItem } from '../../../../types';
+import './navPanelItem.css'
 
 interface INavPanelItemProp{
     navPanelItem: INavPanelItem,
@@ -15,7 +16,7 @@ const NavPanelItem:React.FC<INavPanelItemProp> = (props) => {
     const y = GeometryHelper.degToRad( props.navPanelItem.coordinates.longitude-90);
 
     return (
-        <button onClick = {() =>  props.setRotation(x, y) }>{props.navPanelItem.title}</button>
+        <button className='container__item' onClick = {() =>  props.setRotation(x, y) }>{props.navPanelItem.title}</button>
     )
 }
 

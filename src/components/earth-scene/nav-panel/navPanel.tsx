@@ -18,8 +18,8 @@ const NavPanel: React.FC<INavPanel> = (props) => {
 
         <div className = 'panel'>
             <div className = 'panel__title'>Приключения рядом</div>
-            
-            <div>{navPanelItems}</div>
+            <div className='panel__text'>Узнай много интересного о достопримечательностях мира и посмотри их вблизи</div>
+            <div className='panel__container'>{navPanelItems}</div>
         </div>
     )
 }
