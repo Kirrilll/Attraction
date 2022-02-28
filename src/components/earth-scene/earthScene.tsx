@@ -1,4 +1,4 @@
-import { Environment, Html, OrbitControls } from '@react-three/drei';
+import { Environment, Html, OrbitControls, Stars } from '@react-three/drei';
 import React, { Suspense } from 'react';
 import { IAttractionMarkerProps, INavPanelItem } from '../../types';
 import Earth from './earth/Earth';
@@ -70,6 +70,7 @@ const EarthScene: React.FC<{ setChild: (child: React.ReactNode) => void }> = (pr
                 <NavPanel navPanelItems={buttons} setRotation={setRotation}></NavPanel>
             </Html>
             <Earth attractions={data} spring={spring} setRotation={setRotation}></Earth>
+            <Stars></Stars>
         </Canvas>
             
         </>
