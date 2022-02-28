@@ -9,6 +9,7 @@ import GeometryHelper from '../../../../helpers/geometryHelper';
 import { useGesture } from '@use-gesture/react';
 import { useThree } from '@react-three/fiber';
 import AttractionScene from '../../../attraction-scene/attractionScene';
+import Model from '../../../models/model';
 
 
 const AttractionMarker: React.FC<{attractionMarkerProp: IAttractionMarkerProps}> = (props) => {
@@ -19,16 +20,16 @@ const AttractionMarker: React.FC<{attractionMarkerProp: IAttractionMarkerProps}>
     }, [])
 
     const setAttraction = () => {
-        return () => props.attractionMarkerProp.setChild(<AttractionScene child = {props.attractionMarkerProp.highPolyModel}></AttractionScene>)
+        return () => props.attractionMarkerProp.setChild(<AttractionScene path = {props.attractionMarkerProp.highPolyModelPath}></AttractionScene>)
     }
 
 
     return (
         <group ref={rotationRef}  onClick = {setAttraction()}>
             <group position={[0, EARTH_RADIUS, 0]}>
-                <mesh scale = {ATTRACTION_RATIO * EARTH_RADIUS}>
-                    {props.attractionMarkerProp.lowPolyModel}
-                </mesh>
+                <group scale = {ATTRACTION_RATIO * EARTH_RADIUS}>
+                    <Model path = {props.attractionMarkerProp.lowPolyModelPath}></Model>
+                </group>
             </group>
         </group>
     );

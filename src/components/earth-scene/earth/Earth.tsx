@@ -19,7 +19,7 @@ const Earth: React.FC<IEarthProps> = (data) => {
     const [colorMap, normalMap] = useTexture([EarthColorMap, EarthNormalMap]);
 
     const attComponents: Array<JSX.Element> = data.attractions
-        .map(attration => <AttractionMarker attractionMarkerProp = {attration}></AttractionMarker>)
+        .map((attration, index) => <AttractionMarker key = {index} attractionMarkerProp = {attration}></AttractionMarker>)
 
     return (
         <>

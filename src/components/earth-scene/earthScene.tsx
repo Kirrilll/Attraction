@@ -5,19 +5,12 @@ import Earth from './earth/Earth';
 import NavPanel from './nav-panel/navPanel';
 import { useSpring, a } from "@react-spring/three";
 import { ArrowFunction, FunctionExpression } from 'typescript';
-import { springConfig } from '../../constans';
-import BigBen from '../models/BigBen';
-import SpasskayTower from '../models/SpasskayTower';
-import TowerOfPisa from '../models/TowerOfPisa';
-import SydneyOperaHouse from '../models/SydneyOperaHouse';
+import { PATH_TO_LOWPOLY_MODELS, springConfig } from '../../constans';
 import { Canvas } from '@react-three/fiber';
 
 import BACKROUDN from '../../assets/sprites/background/background.jpeg'
+import Model from '../models/model';
 
-interface IDataItem{
-    title: String,
-
-}
 
 
 const EarthScene: React.FC<{ setChild: (child: React.ReactNode) => void }> = (props) => {
@@ -34,34 +27,34 @@ const EarthScene: React.FC<{ setChild: (child: React.ReactNode) => void }> = (pr
         });
     };
 
-    //Вынести это куда-то
-    //научиться рендерить по ссылке на модель
+
+    //Путь относительно Model.tsx
     const data: Array<IAttractionMarkerProps> = [
         {
             coordinates: { latitude: 0, longitude: 0 },
-            lowPolyModel: <BigBen></BigBen>,
-            highPolyModel: <BigBen></BigBen>,
+            lowPolyModelPath: PATH_TO_LOWPOLY_MODELS + 'big-ben/big-ben.gltf',
+            highPolyModelPath: PATH_TO_LOWPOLY_MODELS + 'big-ben/big-ben.gltf',
             setChild: props.setChild,
             title: 'Биг-Бен'
         },
         {
             coordinates: { latitude: 40.7143, longitude: -74.006 },
-            lowPolyModel: <SpasskayTower></SpasskayTower>,
-            highPolyModel: <SpasskayTower></SpasskayTower>,
+            lowPolyModelPath: PATH_TO_LOWPOLY_MODELS + 'spasskay-tower/spasskay_tower.gltf',
+            highPolyModelPath: PATH_TO_LOWPOLY_MODELS + 'spasskay-tower/spasskay_tower.gltf',
             setChild: props.setChild,
             title: 'Спасская башня'
         },
         {
             coordinates: { latitude: 48.8534100, longitude: 2.3488000 },
-            lowPolyModel: <TowerOfPisa></TowerOfPisa>,
-            highPolyModel: <TowerOfPisa></TowerOfPisa>,
+            lowPolyModelPath: PATH_TO_LOWPOLY_MODELS + 'tower-of-pisa/tower_of_pisa.gltf',
+            highPolyModelPath: PATH_TO_LOWPOLY_MODELS + 'tower-of-pisa/tower_of_pisa.gltf',
             setChild: props.setChild,
             title: 'Пизанская башня'
         },
         {
             coordinates: { latitude: 43.7229843, longitude: 10.3966227 },
-            lowPolyModel: <SydneyOperaHouse></SydneyOperaHouse>,
-            highPolyModel: <SydneyOperaHouse></SydneyOperaHouse>,
+            lowPolyModelPath: PATH_TO_LOWPOLY_MODELS + 'sydney-opera-house/sydney_opera_house.gltf',
+            highPolyModelPath: PATH_TO_LOWPOLY_MODELS + 'sydney-opera-house/sydney_opera_house.gltf',
             setChild: props.setChild,
             title: 'Оперный театр'
         },

@@ -27,8 +27,8 @@ export interface ICoordinates {
 export interface IAttractionMarkerProps {
   title: string;
   coordinates: ICoordinates;
-  lowPolyModel: ReactNode;
-  highPolyModel: ReactNode;
+  lowPolyModelPath: string;
+  highPolyModelPath: string;
   setChild: (child: ReactNode)=> void;
 
 }

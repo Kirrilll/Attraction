@@ -3,9 +3,10 @@ import * as THREE from 'three'
 import { BakeShadows, Edges, Html, OrbitControls, Plane, softShadows } from '@react-three/drei';
 import { ATTRACTION_SIZE } from '../../constans';
 import { Canvas } from '@react-three/fiber';
+import Model from '../models/model';
 
 
-const AttractionScene: React.FC<{ child: ReactNode }> = (props) => {
+const AttractionScene: React.FC<{ path: string }> = (props) => {
 
 
     return (
@@ -34,7 +35,7 @@ const AttractionScene: React.FC<{ child: ReactNode }> = (props) => {
                 {/* Strip */}
                 {/* <directionalLight position={[-10, -10, 2]} intensity={3} /> */}
                 <mesh scale={ATTRACTION_SIZE} position={[0, -1, 0]}>
-                    {props.child}
+                    <Model path = {props.path}></Model>
                 </mesh>
 
                 {/* <group rotation = {[-Math.PI / 2, 0, 0]} position = {[0, -1 - ATTRACTION_SIZE, 0]}>
