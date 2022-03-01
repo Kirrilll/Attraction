@@ -35,7 +35,9 @@ export interface IAttractionMarkerProps {
 
 export interface INavPanelItem {
   coordinates: ICoordinates;
-  title: String;
+  title: string;
+  flagDefaultPath: string;
+  flagHoveredPath: string;
 }
 
 
