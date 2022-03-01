@@ -2,7 +2,6 @@ import React, { Suspense } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import EarthScene from '../earth-scene/earthScene';
-import TowerOfPisa from '../models/TowerOfPisa';
 
 
 const SceneManager: React.FC = () => {
@@ -11,14 +10,13 @@ const SceneManager: React.FC = () => {
     const [child, setChild] = useState<React.ReactNode>();
 
     useEffect(() => {
-        setChild(<EarthScene setChild = {setChild}></EarthScene>)
+        setChild(<EarthScene setChild={setChild}></EarthScene>)
     }, [])
 
     return (
-        
-            <Suspense fallback={null}>
-                {child}    
-            </Suspense>
+        <Suspense fallback={null}>
+            {child}
+        </Suspense>
     )
 
 

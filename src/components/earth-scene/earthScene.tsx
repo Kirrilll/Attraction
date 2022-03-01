@@ -4,12 +4,9 @@ import { IAttractionMarkerProps, INavPanelItem } from '../../types';
 import Earth from './earth/Earth';
 import NavPanel from './nav-panel/navPanel';
 import { useSpring, a } from "@react-spring/three";
-import { ArrowFunction, FunctionExpression } from 'typescript';
 import { PATH_TO_LOWPOLY_MODELS, springConfig } from '../../constans';
 import { Canvas } from '@react-three/fiber';
 
-import BACKROUDN from '../../assets/sprites/background/background.jpeg'
-import Model from '../models/model';
 
 
 
