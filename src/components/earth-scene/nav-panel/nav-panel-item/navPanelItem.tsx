@@ -3,7 +3,6 @@ import { useContext } from 'react';
 import GeometryHelper from '../../../../helpers/geometryHelper';
 import { INavPanelItem } from '../../../../types';
 import './navPanelItem.css'
-import RU from '../../../../assets/sprites/flags/flags_default/RU.png';
 import { useState } from 'react';
 
 interface INavPanelItemProp {
@@ -31,21 +30,24 @@ const NavPanelItem: React.FC<INavPanelItemProp> = (props) => {
         setIsHovered(false)
     }
 
-    let flagPath = isHovered ? props.navPanelItem.flagHoveredPath : props.navPanelItem.flagDefaultPath;
+    let flagPath:string = isHovered ? props.navPanelItem.flagHoveredPath : props.navPanelItem.flagDefaultPath;
 
 
 
     return (
-            <button
-                onMouseEnter={mouseEnter}
-                onMouseLeave={mouseLeave}
-                className='container__item item'
-                onClick={rotateEarth()}>
-                <div className='item__wrapper'>
-                    <img src = {flagPath}/>
-                </div>
+        <button
+            onMouseEnter={mouseEnter}
+            onMouseLeave={mouseLeave}
+            className='container__item item'
+            onClick={rotateEarth()}>
+            <div className='item__wrapper'>
+                <img src= {`${process.env.PUBLIC_URL}` + flagPath}/>
+            </div>
+            <div className = 'item__title'>
                 {props.navPanelItem.title}
-            </button>
+            </div>
+            
+        </button>
 
     )
 }

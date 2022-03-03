@@ -40,4 +40,7 @@ export interface INavPanelItem {
   flagHoveredPath: string;
 }
 
-
+export interface INavPanelContainer{
+  navPanelItems: Array<INavPanelItem>
+  setRotation: (x:number, y:number) => void;
+}

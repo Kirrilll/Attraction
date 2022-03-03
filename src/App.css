@@ -1,7 +1,4 @@
 
-#root{
-  height: 100%;
-}
 
 body{
   background: linear-gradient(0deg, #060C31 14.51%, #203C7E 66.21%, #4364AD 100%);
@@ -13,9 +10,4 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-
-canvas{
-  height: 100%;
-  width: 100%;
 }
