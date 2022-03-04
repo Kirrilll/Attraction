@@ -1,0 +1,20 @@
+.earth-container {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: inline;
+  overflow: hidden;
+}
+
+.earth-container__title{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+@media (max-width: 912px) {
+    .earth-container__title{
+        display: block;
+    }
+}

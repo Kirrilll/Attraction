@@ -1,6 +1,16 @@
 .panel__title {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 3vw;
-    color: #f7f7f7;
+  font-family: 'Rhythmic';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3vw;
+  color: #f7f7f7;
+}
+
+@media(max-width: 914px){
+  .panel__title{
+    margin-top: 21px;
+    margin-left: 2vw;
+    max-width: 70vw;
+    font-size: 8vw;
   }
+}

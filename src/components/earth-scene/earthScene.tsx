@@ -6,9 +6,9 @@ import NavPanel from './nav-panel/navPanel';
 import { useSpring, a } from "@react-spring/three";
 import { PATH_TO_LOWPOLY_MODELS, springConfig } from '../../constans';
 import { Canvas, useThree } from '@react-three/fiber';
-import { useEffect } from 'react';
 import NavPanelTitle from './nav-panel/nav-panel-title/navPanelTitle';
 import { useMemo } from 'react';
+import './earthScene.css'
 
 interface IAttractionsData {
     title: string;
@@ -98,8 +98,6 @@ const EarthScene: React.FC<{ setChild: (child: React.ReactNode) => void }> = (pr
     const buttons: Array<INavPanelItem> = [];
     const attractions: Array<IAttractionMarkerProps> = [];
 
-    const isBig:boolean = useMemo(() => window.innerWidth > 914, []);
-
     data.forEach((value) => {
         buttons.push({
             title: value.title,
@@ -118,18 +116,17 @@ const EarthScene: React.FC<{ setChild: (child: React.ReactNode) => void }> = (pr
 
 
     return (
-        <>
-            <Canvas style = {{height: window.innerHeight}}>
+        <div className='earth-container'>
+            <Canvas style={{ height: window.innerHeight }}>
                 <spotLight intensity={1} position={[1, 0, 10]}></spotLight>
                 <Earth attractions={attractions} spring={spring} setRotation={setRotation}></Earth>
                 <Stars></Stars>
             </Canvas>
-            <div style={{ position: 'absolute', left: 0, top: 0, display: 'inline-block' }}>
-                {isBig? null : <NavPanelTitle></NavPanelTitle>}
-                <NavPanel navPanelItems={buttons} setRotation={setRotation}></NavPanel>
+            <div className = 'earth-container__title'>
+                <NavPanelTitle></NavPanelTitle>
             </div>
-        </>
-
+            <NavPanel navPanelItems={buttons} setRotation={setRotation}></NavPanel>
+        </div>
     )
 }
 

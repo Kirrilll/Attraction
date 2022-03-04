@@ -7,6 +7,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: 'Neucha';
+  src: url('/src/fonts/Neucha-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Rhythmic';
+  src: url('/src/fonts/Rhythmic RUS.otf') format('opentype');
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
