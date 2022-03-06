@@ -8,6 +8,7 @@ import { useState } from 'react';
 interface INavPanelItemProp {
     navPanelItem: INavPanelItem,
     setRotation: (x: number, y: number) => void;
+    setInvisible: () => void;
 }
 
 const NavPanelItem: React.FC<INavPanelItemProp> = (props) => {
@@ -30,6 +31,11 @@ const NavPanelItem: React.FC<INavPanelItemProp> = (props) => {
         setIsHovered(false)
     }
 
+    const onClick = () => {
+        rotateEarth();
+        //props.setInvisible();
+    }
+
     let flagPath:string = isHovered ? props.navPanelItem.flagHoveredPath : props.navPanelItem.flagDefaultPath;
 
 
@@ -39,7 +45,7 @@ const NavPanelItem: React.FC<INavPanelItemProp> = (props) => {
             onMouseEnter={mouseEnter}
             onMouseLeave={mouseLeave}
             className='container__item item'
-            onClick={rotateEarth()}>
+            onClick={onClick}>
             <div className='item__wrapper'>
                 <img src= {`${process.env.PUBLIC_URL}` + flagPath}/>
             </div>

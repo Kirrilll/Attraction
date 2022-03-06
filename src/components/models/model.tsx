@@ -1,10 +1,12 @@
 import { useGLTF } from '@react-three/drei';
 import React from 'react';
-import { Mesh } from 'three';
+import { useRef } from 'react';
+import { Group, Mesh } from 'three';
 
 const Model: React.FC<{ path: string }> = (props) => {
 
     const { nodes } = useGLTF(props.path);
+
 
     const meshes: Array<JSX.Element> = Object.values(nodes)
         .filter(node => node.type === 'Mesh')
@@ -15,6 +17,7 @@ const Model: React.FC<{ path: string }> = (props) => {
         <group>
             {meshes}
         </group>
+
     )
 }
 

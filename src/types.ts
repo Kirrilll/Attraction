@@ -43,4 +43,5 @@ export interface INavPanelItem {
 export interface INavPanelContainer{
   navPanelItems: Array<INavPanelItem>
   setRotation: (x:number, y:number) => void;
+  setInvisible: () => void;
 }

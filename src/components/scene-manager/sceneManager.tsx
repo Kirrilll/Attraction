@@ -1,6 +1,8 @@
 import React, { Suspense } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { PATH_TO_LOWPOLY_MODELS } from '../../constans';
+import AttractionScene from '../attraction-scene/attractionScene';
 import EarthScene from '../earth-scene/earthScene';
 
 

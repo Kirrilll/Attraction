@@ -9,8 +9,12 @@ import NavPanelItem from './nav-panel-item/navPanelItem';
 import NavPanelTitle from './nav-panel-title/navPanelTitle';
 import './navPanel.css'
 
+interface INavPanelProp {
+    navPanelItems: Array<INavPanelItem>
+    setRotation: (x: number, y: number) => void;
+}
 
-const NavPanel: React.FC<INavPanelContainer> = (props) => {
+const NavPanel: React.FC<INavPanelProp> = (props) => {
 
     const [isVisiable, setIsVisible] = useState<boolean>(false);
 
@@ -36,7 +40,7 @@ const NavPanel: React.FC<INavPanelContainer> = (props) => {
                     <NavPanelTitle></NavPanelTitle>
                 </div>
                 <div className='panel__text'>Узнай много интересного о достопримечательностях мира и посмотри их вблизи</div>
-                <NavPanelContainer navPanelItems={props.navPanelItems} setRotation={props.setRotation}></NavPanelContainer>
+                <NavPanelContainer navPanelItems={props.navPanelItems} setRotation={props.setRotation} setInvisible={() => setIsVisible(false)}> </NavPanelContainer>
             </div>
         </div>
 
