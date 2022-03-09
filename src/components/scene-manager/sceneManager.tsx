@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { PATH_TO_LOWPOLY_MODELS } from '../../constans';
 import AttractionScene from '../attraction-scene/attractionScene';
 import EarthScene from '../earth-scene/earthScene';
-
+import './sceneManager.css'
 
 const SceneManager: React.FC = () => {
 
@@ -17,7 +17,9 @@ const SceneManager: React.FC = () => {
 
     return (
         <Suspense fallback={null}>
-            {child}
+            <div className = 'canvas-container'>
+               {child} 
+            </div>
         </Suspense>
     )
 

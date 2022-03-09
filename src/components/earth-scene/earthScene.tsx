@@ -116,19 +116,19 @@ const EarthScene: React.FC<{ setChild: (child: React.ReactNode) => void }> = (pr
 
 
     return (
-        <div className='earth-container'>
+        <>
             <Canvas style={{ height: window.innerHeight }}>
                 <spotLight intensity={0.5} position={[5, -5, 5]}></spotLight>
                 <spotLight intensity={0.6} position={[-5, 5, -5]}></spotLight>
-                <ambientLight intensity = {0.2}></ambientLight>
+                <ambientLight intensity={0.2}></ambientLight>
                 <Earth attractions={attractions} spring={spring} setRotation={setRotation}></Earth>
                 <Stars></Stars>
             </Canvas>
-            <div className = 'earth-container__title'>
+            <div className='earth-container__title'>
                 <NavPanelTitle></NavPanelTitle>
             </div>
             <NavPanel navPanelItems={buttons} setRotation={setRotation}></NavPanel>
-        </div>
+        </>
     )
 }
 

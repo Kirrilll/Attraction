@@ -1,0 +1,73 @@
+.attraction {
+  position: absolute;
+  left: 29px;
+  top: 48px;
+}
+
+.back-btn {
+  border: none;
+  background: transparent;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.back-btn img {
+  width: 100%;
+}
+
+.attraction__info {
+  text-align: left;
+  margin-top: 39px;
+}
+.info__title {
+  font-family: "Rhythmic";
+  word-wrap: unset;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.5vw;
+  line-height: 55px;
+  color: #f7f7f7;
+  white-space: nowrap;
+}
+.info__subtitle {
+  font-family: "Rhythmic";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25vw;
+  line-height: 28px;
+  color: rgba(247, 247, 247, 0.7);
+}
+.info__location {
+  font-family: "Rhythmic";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.9375vw;
+  line-height: 21px;
+  color: rgba(247, 247, 247, 0.35);
+}
+
+@media (max-width: 1254px) {
+  .attraction__info {
+    margin-top: 1px;
+  }
+
+  .info__title {
+    font-size: 36px;
+    line-height: 41px;
+  }
+}
+
+@media (max-width: 912px) {
+    .attraction__info{
+        display: none;
+    }
+    .attraction{
+        left: 15px;
+        top: 29px
+    }
+    .back-btn{
+        width: 24px;
+        height: 24px;
+    }
+}

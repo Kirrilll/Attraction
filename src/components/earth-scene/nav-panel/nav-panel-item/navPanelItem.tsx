@@ -20,7 +20,7 @@ const NavPanelItem: React.FC<INavPanelItemProp> = (props) => {
     const rotateEarth = () => {
         const x = GeometryHelper.degToRad(props.navPanelItem.coordinates.latitude - 90);
         const y = GeometryHelper.degToRad(props.navPanelItem.coordinates.longitude - 90);
-        return () => props.setRotation(x, y);
+        props.setRotation(x, y);
     }
 
     const mouseEnter = () => {
@@ -33,7 +33,7 @@ const NavPanelItem: React.FC<INavPanelItemProp> = (props) => {
 
     const onClick = () => {
         rotateEarth();
-        //props.setInvisible();
+        props.setInvisible();
     }
 
     let flagPath:string = isHovered ? props.navPanelItem.flagHoveredPath : props.navPanelItem.flagDefaultPath;
