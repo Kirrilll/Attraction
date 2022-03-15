@@ -4,7 +4,7 @@ import { IAttractionMarkerProps, ICoordinates, INavPanelItem } from '../../types
 import Earth from './earth/Earth';
 import NavPanel from './nav-panel/navPanel';
 import { useSpring, a } from "@react-spring/three";
-import { PATH_TO_LOWPOLY_MODELS, springConfig } from '../../constans';
+import { PATH_TO_HIGHPOLY_MODELS, PATH_TO_LOWPOLY_MODELS, springConfig } from '../../constans';
 import { Canvas, useThree } from '@react-three/fiber';
 import NavPanelTitle from './nav-panel/nav-panel-title/navPanelTitle';
 import { useMemo } from 'react';
@@ -56,7 +56,7 @@ const EarthScene: React.FC<{ setChild: (child: React.ReactNode) => void }> = (pr
         {
             coordinates: { latitude: 48.8534100, longitude: 2.3488000 },
             lowPolyModelPath: PATH_TO_LOWPOLY_MODELS + 'tower-of-pisa/tower_of_pisa.gltf',
-            highPolyModelPath: PATH_TO_LOWPOLY_MODELS + 'tower-of-pisa/tower_of_pisa.gltf',
+            highPolyModelPath: PATH_TO_HIGHPOLY_MODELS + 'tower-of-pisa/tower_of_pisa.gltf',
             title: 'Пизанская башня',
             flagDefaultPath: '/assets/sprites/flag/flags_default/IT.png',
             flagHoveredPath: '/assets/sprites/flag/flags_hovered/IT_HOVERED.png'

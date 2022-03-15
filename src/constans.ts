@@ -4,6 +4,9 @@ import { ISpring, ISpringConfig } from "./types";
 //Путь до lowpoly относительно Model.tsx
 export const PATH_TO_LOWPOLY_MODELS: string = '../../../models/lowpoly/';
 
+//Путь до highpoly относительно HighPolyModel.tsx
+export const PATH_TO_HIGHPOLY_MODELS: string = '../../../models/highpoly/';
+
 //Путь до флагов отнсительно navPanekItem.tsx
 export const PATH_TO_FLAGS: string = '../../../../assets/sprites/flags';
 
@@ -20,7 +23,7 @@ export const EARTH_CENTER: Vector3 = new Vector3(3, 0, 0);
 export const ATTRACTION_RATIO: number = 1/1000;
 
 //Пропорции highPoly модели
-export const ATTRACTION_SIZE: number = 1 /100;
+export const ATTRACTION_SIZE: number = 1 /10000;
 
 //Верхняя граница поворота по вертикали
 export const minPolar: number = -Infinity;

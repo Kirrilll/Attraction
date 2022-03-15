@@ -45,3 +45,8 @@ export interface INavPanelContainer{
   setRotation: (x:number, y:number) => void;
   setInvisible: () => void;
 }
+
+export enum PopupInfoType{
+  BUILDING,
+  FACTS
+}
