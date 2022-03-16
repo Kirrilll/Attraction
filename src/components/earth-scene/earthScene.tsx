@@ -117,7 +117,7 @@ const EarthScene: React.FC<{ setChild: (child: React.ReactNode) => void }> = (pr
 
     return (
         <>
-            <Canvas style={{ height: window.innerHeight }}>
+            <Canvas>
                 <spotLight intensity={0.5} position={[5, -5, 5]}></spotLight>
                 <spotLight intensity={0.6} position={[-5, 5, -5]}></spotLight>
                 <ambientLight intensity={0.2}></ambientLight>

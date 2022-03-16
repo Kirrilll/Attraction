@@ -1,7 +1,11 @@
 .canvas-container {
-  position: relative;
-  left: 0;
-  top: 0;
-  display: inline;
-  overflow: hidden;
+    position: relative;
+    left: 0;
+    top: 0;
+    display: inline;
+    overflow: hidden;
+}
+
+canvas {
+    height: 100vh;
 }

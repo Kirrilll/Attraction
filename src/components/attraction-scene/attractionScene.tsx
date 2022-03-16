@@ -22,7 +22,7 @@ const AttractionScene: React.FC<{ path: string }> = (props) => {
 
     return (
         <>
-            <Canvas style={{ height: window.innerHeight }} shadows={true} >
+            <Canvas shadows={true} >
                 <group>
                     <OrbitControls
                         maxDistance={10} //сделать это множителем на размер здания
