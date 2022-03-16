@@ -22,14 +22,14 @@ const AttractionScene: React.FC<{ path: string }> = (props) => {
 
     return (
         <>
-            <Canvas shadows={true} >
+            <Canvas dpr={1} shadows={true} >
                 <group>
                     <OrbitControls
                         maxDistance={10} //сделать это множителем на размер здания
                         minDistance={2}
                         enablePan={false}
                     ></OrbitControls>
-                    <Billboard follow={false} scale={0.4} position={[2, 0, 0]}>
+                    <Billboard follow={false} scale={0.4} position={[3, 2, 0]}>
                         <Popup
                             title='Строительство'
                             type={PopupInfoType.BUILDING}

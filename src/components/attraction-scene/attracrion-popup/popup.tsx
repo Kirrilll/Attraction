@@ -1,5 +1,5 @@
 import { Html } from '@react-three/drei';
-import React from 'react';
+import React, { useState } from 'react';
 import { useMemo } from 'react';
 import { PopupInfoType } from '../../../types';
 import './popup.css'
@@ -13,6 +13,8 @@ interface IPopupProp {
 
 const Popup: React.FC<IPopupProp> = (props) => {
 
+    const [isActive, setIsActive] = useState<Boolean>(false);
+
     const iconPath = () => {
         switch (props.type) {
             case PopupInfoType.BUILDING:
@@ -20,15 +22,19 @@ const Popup: React.FC<IPopupProp> = (props) => {
         }
     };
 
+    const active = isActive ? 'active' : '';
 
-    
 
     return (
         <Html occlude transform>
-            <div className='popup-title'>
+            <div className={`popup-title ${active}`} onClick={() => setIsActive(true)}>
                 <img src={`${process.env.PUBLIC_URL}` + iconPath()} />
-                <div className='popup-title__text'>{props.title}</div>
+                <div className={`popup-title__text ${active}`}>{props.title}</div>
+                <div className={`popup__body ${active}`}>
+                    {props.content}
+                </div>
             </div>
+
 
 
         </Html>
