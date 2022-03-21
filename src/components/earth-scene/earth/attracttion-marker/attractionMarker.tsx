@@ -6,7 +6,7 @@ import * as THREE from 'three'
 import { useEffect } from 'react';
 import { Group } from 'three';
 import GeometryHelper from '../../../../helpers/geometryHelper';
-import { useGesture } from '@use-gesture/react';
+import { useHover } from '@use-gesture/react';
 import { useThree } from '@react-three/fiber';
 import AttractionScene from '../../../attraction-scene/attractionScene';
 import LowPolyModel from '../../../models/lowPolyModel';
@@ -22,7 +22,6 @@ const AttractionMarker: React.FC<{attractionMarkerProp: IAttractionMarkerProps}>
     const setAttraction = () => {
         return () => props.attractionMarkerProp.setChild(<AttractionScene path = {props.attractionMarkerProp.highPolyModelPath}></AttractionScene>)
     }
-
 
     return (
         <group ref={rotationRef}  onClick = {setAttraction()}>

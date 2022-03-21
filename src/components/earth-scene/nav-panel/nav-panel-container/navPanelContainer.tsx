@@ -10,7 +10,9 @@ const NavPanelContainer: React.FC<INavPanelContainer> = (props) => {
     );
 
     return (
-        <div className='panel__container'>{navPanelItems}</div>
+        <div className='panel__container'>
+            {navPanelItems}
+        </div>
     )
 }
 

@@ -4,6 +4,7 @@ import { useMemo } from 'react';
 import { transform } from 'typescript';
 import { INavPanelContainer, INavPanelItem } from '../../../types';
 import CrossButton from '../../cross-button/crossButton';
+import Scrollable from '../../scrollable/scrollable';
 import NavPanelContainer from './nav-panel-container/navPanelContainer';
 import NavPanelItem from './nav-panel-item/navPanelItem';
 import NavPanelTitle from './nav-panel-title/navPanelTitle';
@@ -40,7 +41,10 @@ const NavPanel: React.FC<INavPanelProp> = (props) => {
                     <NavPanelTitle></NavPanelTitle>
                 </div>
                 <div className='panel__text'>Узнай много интересного о достопримечательностях мира и посмотри их вблизи</div>
-                <NavPanelContainer navPanelItems={props.navPanelItems} setRotation={props.setRotation} setInvisible={() => setIsVisible(false)}> </NavPanelContainer>
+                <Scrollable>
+                    <NavPanelContainer navPanelItems={props.navPanelItems} setRotation={props.setRotation} setInvisible={() => setIsVisible(false)}> </NavPanelContainer>
+                </Scrollable>
+                
             </div>
         </div>
 
