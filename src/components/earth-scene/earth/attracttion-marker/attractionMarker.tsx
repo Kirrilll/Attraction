@@ -11,7 +11,7 @@ import { useThree } from '@react-three/fiber';
 import AttractionScene from '../../../attraction-scene/attractionScene';
 import LowPolyModel from '../../../models/lowPolyModel';
 
-
+//Сделать, чтобы при hover был нужный курсор
 const AttractionMarker: React.FC<{attractionMarkerProp: IAttractionMarkerProps}> = (props) => {
     const rotationRef = useRef<Group>();
 
@@ -22,6 +22,7 @@ const AttractionMarker: React.FC<{attractionMarkerProp: IAttractionMarkerProps}>
     const setAttraction = () => {
         return () => props.attractionMarkerProp.setChild(<AttractionScene path = {props.attractionMarkerProp.highPolyModelPath}></AttractionScene>)
     }
+
 
     return (
         <group ref={rotationRef}  onClick = {setAttraction()}>

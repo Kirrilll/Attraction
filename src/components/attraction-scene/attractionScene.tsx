@@ -1,4 +1,4 @@
-import React, { ReactElement, ReactNode } from 'react';
+import React, { ReactElement, ReactNode, Suspense } from 'react';
 import * as THREE from 'three'
 import { BakeShadows, Billboard, Bounds, ContactShadows, Edges, Environment, GradientTexture, Html, meshBounds, OrbitControls, Plane, PointMaterial, softShadows, SpotLight, Text } from '@react-three/drei';
 import { ATTRACTION_SIZE } from '../../constans';
@@ -12,7 +12,7 @@ import { useEffect } from 'react';
 import HighPolyModel from '../models/highPolyModel';
 import Popup from './attracrion-popup/popup';
 import { PopupInfoType } from '../../types';
-import TowerOfPisa from '../models/Tower_of_pisa';
+import LoadingIndicator from '../loading-indicator/loadingIndicator';
 
 softShadows();
 
@@ -21,7 +21,7 @@ const AttractionScene: React.FC<{ path: string }> = (props) => {
 
 
     return (
-        <>
+        <Suspense fallback = {<LoadingIndicator/>}>
             <Canvas dpr={1} shadows={true} >
                 <group>
                     <OrbitControls
@@ -49,8 +49,7 @@ const AttractionScene: React.FC<{ path: string }> = (props) => {
                 subtitle='Собор Парижской Богоматери'
                 location='Франция, Париж'
             />
-        </>
-
+        </Suspense>
     );
 }
 

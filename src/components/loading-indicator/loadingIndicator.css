@@ -1,0 +1,20 @@
+.loading{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading__wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading__text{
+    margin-top: 30px;
+    color: #F3F3F3;
+    font-size: 42px;
+}
