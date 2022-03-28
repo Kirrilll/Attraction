@@ -1,7 +1,7 @@
 import React, { ReactElement, ReactNode, Suspense } from 'react';
 import * as THREE from 'three'
 import { BakeShadows, Billboard, Bounds, ContactShadows, Edges, Environment, GradientTexture, Html, meshBounds, OrbitControls, Plane, PointMaterial, softShadows, SpotLight, Text } from '@react-three/drei';
-import { ATTRACTION_SIZE } from '../../constans';
+import { ATTRACTION_SIZE, PATH_TO_LOWPOLY_MODELS } from '../../constans';
 import { Canvas } from '@react-three/fiber';
 import LowPolyModel from '../models/lowPolyModel';
 import Stage from './stage/stage';
@@ -11,17 +11,26 @@ import { Points } from 'three';
 import { useEffect } from 'react';
 import HighPolyModel from '../models/highPolyModel';
 import Popup from './attracrion-popup/popup';
-import { PopupInfoType } from '../../types';
+import { IAttractionHigh, PopupInfoType } from '../../types';
 import LoadingIndicator from '../loading-indicator/loadingIndicator';
+import { useNavigate, useParams } from 'react-router-dom';
+import { useState } from 'react';
+import { getAttractionById } from '../../data';
+
 
 softShadows();
 
-const AttractionScene: React.FC<{ path: string }> = (props) => {
+const AttractionScene: React.FC = () => {
 
+    const params = useParams();
+    const navigate = useNavigate();
+
+    const attraction = getAttractionById(Number(params.attractionId));
 
 
     return (
         <Suspense fallback = {<LoadingIndicator/>}>
+           
             <Canvas dpr={1} shadows={true} >
                 <group>
                     <OrbitControls
@@ -38,16 +47,15 @@ const AttractionScene: React.FC<{ path: string }> = (props) => {
                     </Billboard>
                     <Stage></Stage>
                     <mesh scale={ATTRACTION_SIZE} position={[0, -1, 0]} castShadow receiveShadow>
-                        {/* <HighPolyModel path = {props.path}></HighPolyModel> */}
-                        <LowPolyModel path={props.path}></LowPolyModel>
+                        <LowPolyModel path={ attraction.highPolyModelPath }></LowPolyModel>
                     </mesh>
                 </group>
             </Canvas>
             <SceneTitle
-                back={() => console.log('back')}
-                title='Нотр-Дам-де-ПарИ'
-                subtitle='Собор Парижской Богоматери'
-                location='Франция, Париж'
+                back={() => navigate('/')}
+                title={attraction.title}
+                subtitle= {attraction?.subtitle}
+                location= {attraction.location}
             />
         </Suspense>
     );

@@ -1,8 +1,10 @@
 import { Html } from '@react-three/drei';
 import React, { useState } from 'react';
-import { useMemo } from 'react';
 import { PopupInfoType } from '../../../types';
+import Scrollable from '../../scrollable/scrollable';
 import './popup.css'
+import BUILDING_ICON from '../../../assets/images/building_icon.png'
+
 
 interface IPopupProp {
     title: string,
@@ -28,10 +30,12 @@ const Popup: React.FC<IPopupProp> = (props) => {
     return (
         <Html occlude transform>
             <div className={`popup-title ${active}`} onClick={() => setIsActive(true)}>
-                <img src={`${process.env.PUBLIC_URL}` + iconPath()} />
+                <img src={BUILDING_ICON} />
                 <div className={`popup-title__text ${active}`}>{props.title}</div>
                 <div className={`popup__body ${active}`}>
-                    {props.content}
+                    <Scrollable>
+                        {props.content}
+                    </Scrollable>
                 </div>
             </div>
 

@@ -1,12 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import EarthScene from './components/earth-scene/earthScene';
+import AttractionScene from './components/attraction-scene/attractionScene';
+
+
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    {/* <App /> */}
+    <Routes>
+        <Route path='/' element={<EarthScene></EarthScene>}></Route>
+        <Route path='attractions' element={<AttractionScene></AttractionScene>}>
+          <Route path = ':attractionId'></Route>
+        </Route>
+    </Routes>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

@@ -6,24 +6,24 @@ import AttractionScene from '../attraction-scene/attractionScene';
 import EarthScene from '../earth-scene/earthScene';
 import './sceneManager.css'
 
-const SceneManager: React.FC = () => {
+// const SceneManager: React.FC = () => {
 
 
-    const [child, setChild] = useState<React.ReactNode>();
+//     const [child, setChild] = useState<React.ReactNode>();
 
-    useEffect(() => {
-        setChild(<EarthScene setChild={setChild}></EarthScene>)
-    }, [])
+//     useEffect(() => {
+//         setChild(<EarthScene setChild={setChild}></EarthScene>)
+//     }, [])
 
-    return (
-        <Suspense fallback={null}>
-            <div className = 'canvas-container'>
-               {child} 
-            </div>
-        </Suspense>
-    )
+//     return (
+//         <Suspense fallback={null}>
+//             <div className = 'canvas-container'>
+//                {child} 
+//             </div>
+//         </Suspense>
+//     )
 
 
-}
+// }
 
-export default SceneManager;
+// export default SceneManager;

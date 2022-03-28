@@ -10,6 +10,7 @@ import { useHover } from '@use-gesture/react';
 import { useThree } from '@react-three/fiber';
 import AttractionScene from '../../../attraction-scene/attractionScene';
 import LowPolyModel from '../../../models/lowPolyModel';
+import { Link, useNavigate } from 'react-router-dom';
 
 //Сделать, чтобы при hover был нужный курсор
 const AttractionMarker: React.FC<{attractionMarkerProp: IAttractionMarkerProps}> = (props) => {
@@ -19,16 +20,12 @@ const AttractionMarker: React.FC<{attractionMarkerProp: IAttractionMarkerProps}>
         rotationRef.current?.setRotationFromQuaternion(GeometryHelper.rotateByCoordinates(props.attractionMarkerProp.coordinates));
     }, [])
 
-    const setAttraction = () => {
-        return () => props.attractionMarkerProp.setChild(<AttractionScene path = {props.attractionMarkerProp.highPolyModelPath}></AttractionScene>)
-    }
-
 
     return (
-        <group ref={rotationRef}  onClick = {setAttraction()}>
+        <group ref={rotationRef}  onClick = {props.attractionMarkerProp.onNavigate}>
             <group position={[0, EARTH_RADIUS, 0]}>
                 <group scale = {ATTRACTION_RATIO * EARTH_RADIUS}>
-                    <LowPolyModel path = {props.attractionMarkerProp.lowPolyModelPath}></LowPolyModel>
+                    <LowPolyModel path = {props.attractionMarkerProp.lowPolyModelPath}> </LowPolyModel>
                 </group>
             </group>
         </group>

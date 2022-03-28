@@ -23,7 +23,7 @@ export const EARTH_CENTER: Vector3 = new Vector3(3, 0, 0);
 export const ATTRACTION_RATIO: number = 1/1000;
 
 //Пропорции highPoly модели
-export const ATTRACTION_SIZE: number = 1 /10000;
+export const ATTRACTION_SIZE: number = 1 /50;
 
 //Верхняя граница поворота по вертикали
 export const minPolar: number = -Infinity;

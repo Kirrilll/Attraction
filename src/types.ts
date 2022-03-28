@@ -25,11 +25,9 @@ export interface ICoordinates {
 }
 
 export interface IAttractionMarkerProps {
-  title: string;
   coordinates: ICoordinates;
   lowPolyModelPath: string;
-  highPolyModelPath: string;
-  setChild: (child: ReactNode)=> void;
+  onNavigate: () => void
 
 }
 
@@ -46,7 +44,28 @@ export interface INavPanelContainer{
   setInvisible: () => void;
 }
 
+
+export interface IAttractionNav {
+  idHigh: number
+  title: string;
+  coordinates: ICoordinates;
+  lowPolyModelPath: string;
+  flagDefaultPath: string;
+  flagHoveredPath: string
+}
+
+export interface IAttractionHigh{
+  id: number
+  information: Array<string>;
+  highPolyModelPath: string;
+  title: string;
+  subtitle?: string;
+  location: string
+}
+
 export enum PopupInfoType{
   BUILDING,
   FACTS
 }
+
+

@@ -1,9 +1,33 @@
+.canvas-container {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: inline;
+    overflow: hidden;
+}
+
+canvas {
+    height: 100vh;
+}
+
 .earth-container__title{
     display: none;
     position: absolute;
     left: 0;
     top: 0;
 }
+
+  
+  body {
+    width:100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Neucha';
+    background: linear-gradient(0deg, #060C31 14.51%, #203C7E 66.21%, #4364AD 100%);
+  }
+
 
 @media (max-width: 912px) {
     .earth-container__title{
