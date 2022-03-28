@@ -1,16 +1,9 @@
 import { Html } from '@react-three/drei';
 import React, { useState } from 'react';
-import { PopupInfoType } from '../../../types';
+import { IPopupProp, PopupInfoType } from '../../../types';
 import Scrollable from '../../scrollable/scrollable';
 import './popup.css'
 import BUILDING_ICON from '../../../assets/images/building_icon.png'
-
-
-interface IPopupProp {
-    title: string,
-    content: string,
-    type: PopupInfoType
-}
 
 
 const Popup: React.FC<IPopupProp> = (props) => {
@@ -34,13 +27,13 @@ const Popup: React.FC<IPopupProp> = (props) => {
                 <div className={`popup-title__text ${active}`}>{props.title}</div>
                 <div className={`popup__body ${active}`}>
                     <Scrollable>
-                        {props.content}
+                        <div style = {{overflow: 'hidden'}} >
+                            {props.content}
+                        </div>
                     </Scrollable>
                 </div>
+
             </div>
-
-
-
         </Html>
     )
 }

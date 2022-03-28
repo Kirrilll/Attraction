@@ -56,11 +56,17 @@ export interface IAttractionNav {
 
 export interface IAttractionHigh{
   id: number
-  information: Array<string>;
+  information: Array<IPopupProp>;
   highPolyModelPath: string;
   title: string;
   subtitle?: string;
   location: string
+}
+
+export interface IPopupProp {
+  title: string,
+  content: string,
+  type: PopupInfoType
 }
 
 export enum PopupInfoType{

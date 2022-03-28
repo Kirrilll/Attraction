@@ -7,7 +7,7 @@ import LowPolyModel from '../models/lowPolyModel';
 import Stage from './stage/stage';
 import SceneTitle from './scene-title/sceneTitle';
 import { useRef } from 'react';
-import { Points } from 'three';
+import { Points, Vector3 } from 'three';
 import { useEffect } from 'react';
 import HighPolyModel from '../models/highPolyModel';
 import Popup from './attracrion-popup/popup';
@@ -16,6 +16,7 @@ import LoadingIndicator from '../loading-indicator/loadingIndicator';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { getAttractionById } from '../../data';
+import PopupCloud from './popup-cloud/popupCloud';
 
 
 softShadows();
@@ -38,13 +39,8 @@ const AttractionScene: React.FC = () => {
                         minDistance={2}
                         enablePan={false}
                     ></OrbitControls>
-                    <Billboard follow={false} scale={0.4} position={[3, 2, 0]}>
-                        <Popup
-                            title='Строительство'
-                            type={PopupInfoType.BUILDING}
-                            content='фафаффффффффффффффффффффффффффффффффффрыгфганыгнафгнырапфнгапыфгнапнгфа'
-                        ></Popup>
-                    </Billboard>
+
+                    <PopupCloud popups = {attraction.information} radius = {5} center = {new Vector3(0, -1, 0)}/>
                     <Stage></Stage>
                     <mesh scale={ATTRACTION_SIZE} position={[0, -1, 0]} castShadow receiveShadow>
                         <LowPolyModel path={ attraction.highPolyModelPath }></LowPolyModel>

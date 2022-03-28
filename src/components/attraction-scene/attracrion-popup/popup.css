@@ -26,7 +26,6 @@
 }
 
 .popup-title.active {
-  cursor: text;
   border-radius: 49px;
   padding-left: 38px;
 }
@@ -60,5 +59,7 @@
 
 .popup__body.active {
   display: inline-block;
+  /* max-height: 300px; */
+  /* overflow: hidden; */
 }
 
