@@ -29,7 +29,7 @@ const NavPanel: React.FC<INavPanelProp> = (props) => {
             {
                 !isVisiable
                     ? <div className='panel-open-btn'>
-                        <button onClick={() => setIsVisible(true)}>Октрыть</button>
+                        <button className='button-open-btn' onClick={() => setIsVisible(true)}>Тапни сюда</button>
                     </div>
                     : null
             }

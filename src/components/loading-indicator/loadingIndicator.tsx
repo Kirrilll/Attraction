@@ -12,7 +12,7 @@ const LoadingIndicator: React.FC = () => {
         <div className = 'loading'>
             <div className = 'loading__wrapper'>
                 <img className = 'loading__img' src = {`${process.env.PUBLIC_URL}` + catPath}/>
-                <div className = 'loading__text'>Пока мы загружаем 3д модель, полюбуйтесь на этого котика)</div>
+                <div className = 'loading__text'>Пока мы загружаем 3д модель, полюбуйтесь на этого котика =)</div>
             </div>
         </div>
     )
