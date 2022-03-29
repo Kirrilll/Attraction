@@ -1,6 +1,6 @@
 .panel__container {
     display: grid;
-    margin-top: 48px;
+    margin-top: 5%;
     grid-template-columns: repeat(auto-fit, 300px);
     row-gap: 30px;
     column-gap: 2.5vw;

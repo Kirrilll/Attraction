@@ -28,9 +28,9 @@ const Popup: React.FC<IPopupProp> = (props) => {
                 <div className={`popup__body ${active}`}>
                     <Scrollable>
                         <div style={{maxHeight:'300px'}}>
-                                    <div className={`popup__body__text ${active}`}>
-                                        {props.content}
-                                    </div>
+                            <div className={`popup__body__text ${active}`}>
+                                {props.content}
+                            </div>
                         </div>
                     </Scrollable>
                 </div>

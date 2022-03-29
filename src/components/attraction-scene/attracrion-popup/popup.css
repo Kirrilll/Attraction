@@ -82,6 +82,5 @@
 .popup__body.active {
   display: inline-block;
   max-height: 360px; 
-  /*overflow: hidden;*/
 }
 
