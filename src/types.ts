@@ -71,7 +71,8 @@ export interface IPopupProp {
 
 export enum PopupInfoType{
   BUILDING,
-  FACTS
+  INTERESTING,
+  GENERAL
 }
 
 

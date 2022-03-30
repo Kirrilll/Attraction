@@ -16,6 +16,7 @@
 
 .popup-title__text {
     display: none;
+    width: 250px;
     font-family: "Neucha";
     font-style: normal;
     font-weight: 400;
@@ -35,7 +36,7 @@
     border-radius: 49px;
     padding: 14px;
     border-radius: 49px;
-    padding-right: 60px;
+    padding-right: 50px;
     transition: all 0.4s ease-in;
 }
 

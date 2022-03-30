@@ -30,7 +30,7 @@ const PopupCloud: React.FC<IPopupCloud> = (props) => {
                 <Billboard follow={true} scale={0.4} position={positions[index]}>
                     <Popup
                         title= {popup.title}
-                        type={PopupInfoType.BUILDING}
+                        type={popup.type}
                         content={popup.content}
                     ></Popup>
                 </Billboard>
