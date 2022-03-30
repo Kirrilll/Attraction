@@ -13,6 +13,20 @@ const LoadingIndicator: React.FC = () => {
             <div className = 'loading__wrapper'>
                 <img className = 'loading__img' src = {`${process.env.PUBLIC_URL}` + catPath}/>
                 <div className = 'loading__text'>Пока мы загружаем 3д модель, полюбуйтесь на этого котика =)</div>
+                <div className="loading__spinner-wrap">
+                    <div className="loading__spinner">
+                        <div className="spinner__body"></div>
+                        <div className="spinner__shadow"></div>
+                    </div>
+                    <div className="loading__spinner">
+                        <div className="spinner__body"></div>
+                        <div className="spinner__shadow"></div>
+                    </div>
+                    <div className="loading__spinner">
+                        <div className="spinner__body"></div>
+                        <div className="spinner__shadow"></div>
+                    </div>
+                </div>
             </div>
         </div>
     )
