@@ -19,10 +19,11 @@ const Popup: React.FC<IPopupProp> = (props) => {
 
     const active = isActive ? 'active' : '';
 
+    const popapTitleClass = isActive? 'popup-title--active': 'popup-title'
 
     return (
         <Html occlude transform>
-            <div className={`popup-title ${active}`} onClick={() => setIsActive(true)}>
+            <div className={popapTitleClass} onClick={() => setIsActive(true)}>
                 <img src={BUILDING_ICON} />
                 <div className={`popup-title__text ${active}`}>{props.title}</div>
                 <div className={`popup__body ${active}`}>

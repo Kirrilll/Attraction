@@ -24,8 +24,6 @@ const PopupCloud: React.FC<IPopupCloud> = (props) => {
         return temp
     }, [props.popups.length, props.radius]);
 
-    console.log(positions)
-
     return (
         <>
             {props.popups.map((popup, index) => (

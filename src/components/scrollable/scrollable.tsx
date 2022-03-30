@@ -27,7 +27,7 @@ const Scrollable: React.FC = (props) => {
   
 
     return (
-        <div {...bind()} style={{ overflow: 'hidden', transition: 'all 1s ease', }} ref={outerDivRef}>
+        <div {...bind()} style={{ overflow: 'hidden', transition: 'all 1s ease'}} ref={outerDivRef}>
             <div ref={innerDivRef}>
                 {props.children}
             </div>

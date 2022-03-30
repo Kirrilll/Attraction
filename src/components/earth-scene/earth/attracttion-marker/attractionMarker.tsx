@@ -20,9 +20,12 @@ const AttractionMarker: React.FC<{attractionMarkerProp: IAttractionMarkerProps}>
         rotationRef.current?.setRotationFromQuaternion(GeometryHelper.rotateByCoordinates(props.attractionMarkerProp.coordinates));
     }, [])
 
+    const {gl} = useThree();
 
     return (
-        <group ref={rotationRef}  onClick = {props.attractionMarkerProp.onNavigate}>
+        <group ref={rotationRef}  
+            onClick = {props.attractionMarkerProp.onNavigate}
+            onPointerMove = {(e) =>  gl.domElement.style.cursor = 'pointer'}>
             <group position={[0, EARTH_RADIUS, 0]}>
                 <group scale = {ATTRACTION_RATIO * EARTH_RADIUS}>
                     <LowPolyModel path = {props.attractionMarkerProp.lowPolyModelPath}> </LowPolyModel>
