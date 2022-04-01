@@ -18,25 +18,22 @@ export const dataNavs: Array<IAttractionNav> = [
         idHigh: 1,
         coordinates: { latitude: 40.7143, longitude: -74.006 },
         lowPolyModelPath: PATH_TO_LOWPOLY_MODELS + 'spasskay-tower/spasskay_tower.gltf',
-       // highPolyModelPath: PATH_TO_LOWPOLY_MODELS + 'spasskay-tower/spasskay_tower.gltf',
         title: 'Спасская башня',
         flagDefaultPath: '/assets/sprites/flag/flags_default/RU.png',
         flagHoveredPath: '/assets/sprites/flag/flags_hovered/RU_HOVERED.png'
     },
     {
         idHigh: 2,
-        coordinates: { latitude: 48.8534100, longitude: 2.3488000 },
+        coordinates: { latitude: 43.7229843, longitude: 10.3966227 },
         lowPolyModelPath: PATH_TO_LOWPOLY_MODELS + 'tower-of-pisa/tower_of_pisa.gltf',
-       // highPolyModelPath: PATH_TO_HIGHPOLY_MODELS + 'tower-of-pisa/tower_of_pisa.gltf',
         title: 'Пизанская башня',
         flagDefaultPath: '/assets/sprites/flag/flags_default/IT.png',
         flagHoveredPath: '/assets/sprites/flag/flags_hovered/IT_HOVERED.png'
     },
     {
         idHigh: 3,
-        coordinates: { latitude: 43.7229843, longitude: 10.3966227 },
+        coordinates: { latitude: 48.8534100, longitude: 2.3488000 },
         lowPolyModelPath: PATH_TO_LOWPOLY_MODELS + 'sydney-opera-house/sydney_opera_house.gltf',
-        //highPolyModelPath: PATH_TO_LOWPOLY_MODELS + 'sydney-opera-house/sydney_opera_house.gltf',
         title: 'Оперный театр',
         flagDefaultPath: '/assets/sprites/flag/flags_default/AU.png',
         flagHoveredPath: '/assets/sprites/flag/flags_hovered/AU_HOVERED.png'
@@ -93,7 +90,7 @@ export const dataHigh: Array<IAttractionHigh> = [
     },
     {
         id: 2,
-        highPolyModelPath: PATH_TO_LOWPOLY_MODELS + 'tower-of-pisa/tower_of_pisa.gltf',
+        highPolyModelPath: 'https://downloader.disk.yandex.ru/disk/1ed3b872bdb72dcd398403461d1e862439e3a119c6be218884abfb0292632233/624747f6/q0VXBEFBkYltsRj2H9525MXN_knwNY5vb-UsSuDEMseEe6ThvaLhrMwohR3qbRVN9iQtLh_Ksdw58vmjoT-ang%3D%3D?uid=1200320564&filename=tower.fbx&disposition=attachment&hash=&limit=0&content_type=application%2Foctet-stream&owner_uid=1200320564&fsize=14755008&hid=6a6dea51013e13e93e8932967fbe6368&media_type=image&tknv=v2&etag=e054a8ce22d51a3ffc713984fe144826',
         information: [
             {
                 title: 'Строительство',

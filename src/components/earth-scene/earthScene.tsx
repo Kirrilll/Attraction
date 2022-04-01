@@ -15,15 +15,6 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { dataNavs } from '../../data';
 
-// interface IAttractionsData {
-//     title: string;
-//     coordinates: ICoordinates;
-//     lowPolyModelPath: string;
-//     highPolyModelPath: string;
-//     flagDefaultPath: string;
-//     flagHoveredPath: string
-// }
-
 
 const EarthScene: React.FC = () => {
 
