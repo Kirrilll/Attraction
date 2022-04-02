@@ -7,7 +7,7 @@ import { IAttractionHigh, IAttractionNav, ICoordinates, PopupInfoType } from "./
 export const dataNavs: Array<IAttractionNav> = [
     {
         idHigh: 0,
-        coordinates: { latitude: 0, longitude: 0 },
+        coordinates: { latitude: 51.50083, longitude:  -0.12444 },
         lowPolyModelPath: PATH_TO_LOWPOLY_MODELS + 'big-ben/big-ben.gltf',
         //highPolyModelPath: PATH_TO_LOWPOLY_MODELS + 'big-ben/big-ben.gltf',
         title: 'Биг-Бен',
@@ -16,7 +16,7 @@ export const dataNavs: Array<IAttractionNav> = [
     },
     {
         idHigh: 1,
-        coordinates: { latitude: 40.7143, longitude: -74.006 },
+        coordinates: { latitude: 55.7525673, longitude: 37.6214371 },
         lowPolyModelPath: PATH_TO_LOWPOLY_MODELS + 'spasskay-tower/spasskay_tower.gltf',
         title: 'Спасская башня',
         flagDefaultPath: '/assets/sprites/flag/flags_default/RU.png',
@@ -32,7 +32,7 @@ export const dataNavs: Array<IAttractionNav> = [
     },
     {
         idHigh: 3,
-        coordinates: { latitude: 48.8534100, longitude: 2.3488000 },
+        coordinates: { latitude: -33.857058, longitude: 151.214897 },
         lowPolyModelPath: PATH_TO_LOWPOLY_MODELS + 'sydney-opera-house/sydney_opera_house.gltf',
         title: 'Оперный театр',
         flagDefaultPath: '/assets/sprites/flag/flags_default/AU.png',
