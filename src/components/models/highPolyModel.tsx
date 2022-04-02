@@ -3,7 +3,7 @@ import React from 'react';
 import { useRef } from 'react';
 import { Group, Mesh } from 'three';
 
-const HighPolyModel: React.FC<{path: string}> = (props) => {
+const LowPolyModel: React.FC<{path: string}> = (props) => {
 
     const model = useFBX(props.path);
 
@@ -12,4 +12,4 @@ const HighPolyModel: React.FC<{path: string}> = (props) => {
     );
 }
 
-export default HighPolyModel;
+export default LowPolyModel;

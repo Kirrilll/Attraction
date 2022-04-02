@@ -42,8 +42,8 @@ const AttractionScene: React.FC = () => {
 
                     <PopupCloud popups = {attraction.information} radius = {5} center = {new Vector3(0, -1, 0)}/>
                     <Stage></Stage>
-                    <mesh scale={1/1000} position={[0, -1, 0]} castShadow receiveShadow>
-                        <HighPolyModel path = {attraction.highPolyModelPath}></HighPolyModel>
+                    <mesh scale={1/19000} position={[0, -1.6, 0]} castShadow receiveShadow>
+                        <LowPolyModel path = {attraction.highPolyModelPath}></LowPolyModel>
                     </mesh>
                 </group>
             </Canvas>

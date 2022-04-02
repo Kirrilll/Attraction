@@ -44,7 +44,7 @@ export const dataNavs: Array<IAttractionNav> = [
 export const dataHigh: Array<IAttractionHigh> = [
     {
         id: 0,
-        highPolyModelPath: PATH_TO_LOWPOLY_MODELS + 'big-ben/big-ben.gltf',
+        highPolyModelPath: 'https://downloader.disk.yandex.ru/disk/3cad63586f8fbf4b21b5a80d3240799d3d93c6cdb4dd3869542992debdc1ffb9/6248f28f/q0VXBEFBkYltsRj2H9525LvfVBYydytrbmSPRhx9rluu9T_ih2XSMISZXRz1Z8uw17aZdV_Nue0y7mnQIOozVw%3D%3D?uid=1200320564&filename=pisa.gltf&disposition=attachment&hash=&limit=0&content_type=text%2Fplain&owner_uid=1200320564&fsize=19650467&hid=b773234240d9e7a51efa1ac67a4fbc56&media_type=text&tknv=v2&etag=5110d19fbe40be601fbdeadbaf45a73d',
         information: [
             {
                 title: 'Строительство',
@@ -67,7 +67,7 @@ export const dataHigh: Array<IAttractionHigh> = [
     },
     {
         id: 1,
-        highPolyModelPath: PATH_TO_LOWPOLY_MODELS + 'spasskay-tower/spasskay_tower.gltf',
+        highPolyModelPath: 'https://downloader.disk.yandex.ru/disk/3cad63586f8fbf4b21b5a80d3240799d3d93c6cdb4dd3869542992debdc1ffb9/6248f28f/q0VXBEFBkYltsRj2H9525LvfVBYydytrbmSPRhx9rluu9T_ih2XSMISZXRz1Z8uw17aZdV_Nue0y7mnQIOozVw%3D%3D?uid=1200320564&filename=pisa.gltf&disposition=attachment&hash=&limit=0&content_type=text%2Fplain&owner_uid=1200320564&fsize=19650467&hid=b773234240d9e7a51efa1ac67a4fbc56&media_type=text&tknv=v2&etag=5110d19fbe40be601fbdeadbaf45a73d',
         information: [
             {
                 title: 'Строительство',
@@ -90,7 +90,7 @@ export const dataHigh: Array<IAttractionHigh> = [
     },
     {
         id: 2,
-        highPolyModelPath: 'https://downloader.disk.yandex.ru/disk/1ed3b872bdb72dcd398403461d1e862439e3a119c6be218884abfb0292632233/624747f6/q0VXBEFBkYltsRj2H9525MXN_knwNY5vb-UsSuDEMseEe6ThvaLhrMwohR3qbRVN9iQtLh_Ksdw58vmjoT-ang%3D%3D?uid=1200320564&filename=tower.fbx&disposition=attachment&hash=&limit=0&content_type=application%2Foctet-stream&owner_uid=1200320564&fsize=14755008&hid=6a6dea51013e13e93e8932967fbe6368&media_type=image&tknv=v2&etag=e054a8ce22d51a3ffc713984fe144826',
+        highPolyModelPath: 'https://downloader.disk.yandex.ru/disk/3cad63586f8fbf4b21b5a80d3240799d3d93c6cdb4dd3869542992debdc1ffb9/6248f28f/q0VXBEFBkYltsRj2H9525LvfVBYydytrbmSPRhx9rluu9T_ih2XSMISZXRz1Z8uw17aZdV_Nue0y7mnQIOozVw%3D%3D?uid=1200320564&filename=pisa.gltf&disposition=attachment&hash=&limit=0&content_type=text%2Fplain&owner_uid=1200320564&fsize=19650467&hid=b773234240d9e7a51efa1ac67a4fbc56&media_type=text&tknv=v2&etag=5110d19fbe40be601fbdeadbaf45a73d',
         information: [
             {
                 title: 'Строительство',
@@ -113,7 +113,7 @@ export const dataHigh: Array<IAttractionHigh> = [
     },
     {
         id: 3,
-        highPolyModelPath: PATH_TO_LOWPOLY_MODELS + 'sydney-opera-house/sydney_opera_house.gltf',
+        highPolyModelPath: 'https://downloader.disk.yandex.ru/disk/3cad63586f8fbf4b21b5a80d3240799d3d93c6cdb4dd3869542992debdc1ffb9/6248f28f/q0VXBEFBkYltsRj2H9525LvfVBYydytrbmSPRhx9rluu9T_ih2XSMISZXRz1Z8uw17aZdV_Nue0y7mnQIOozVw%3D%3D?uid=1200320564&filename=pisa.gltf&disposition=attachment&hash=&limit=0&content_type=text%2Fplain&owner_uid=1200320564&fsize=19650467&hid=b773234240d9e7a51efa1ac67a4fbc56&media_type=text&tknv=v2&etag=5110d19fbe40be601fbdeadbaf45a73d',
         information: [
             {
                 title: 'Строительство',
