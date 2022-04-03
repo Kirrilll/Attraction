@@ -37,6 +37,7 @@ export const minAimuth: number = 0;
 //Верхняя раница повората пов вертикали
 export const maxAzimuth: number = Math.PI / 2;
 
+export const OAuthToken: string = 'AQAAAABHi3A0AAfK8UmQktACgEHcg8ClBVan86I';
 
 //Настройка для поворота Земли
 export const springConfig: ISpringConfig = {

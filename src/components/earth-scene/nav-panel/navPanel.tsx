@@ -31,7 +31,7 @@ const NavPanel: React.FC<INavPanelProp> = (props) => {
                     ? <div className='panel-open-btn'>
                         <button className='button-open-btn' onClick={() => setIsVisible(true)}>Тапни сюда</button>
                     </div>
-                    : null
+                    :  null
             }
             <div className='panel'>
                 <div className='panel__close-btn'>

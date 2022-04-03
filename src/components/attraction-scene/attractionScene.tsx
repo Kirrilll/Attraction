@@ -11,12 +11,14 @@ import { Points, Vector3 } from 'three';
 import { useEffect } from 'react';
 import HighPolyModel from '../models/highPolyModel';
 import Popup from './attracrion-popup/popup';
-import { IAttractionHigh, PopupInfoType } from '../../types';
+import { DataState, IAttractionHigh, PopupInfoType } from '../../types';
 import LoadingIndicator from '../loading-indicator/loadingIndicator';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { getAttractionById } from '../../data';
 import PopupCloud from './popup-cloud/popupCloud';
+import axios from 'axios';
+import { useDisk } from '../../hooks/useDisk';
 
 
 softShadows();
@@ -25,13 +27,18 @@ const AttractionScene: React.FC = () => {
 
     const params = useParams();
     const navigate = useNavigate();
-
     const attraction = getAttractionById(Number(params.attractionId));
+
+    const {status, data} = useDisk(
+        attraction.highPolyModelPath,
+        [params]
+    );
 
 
     return (
-        <Suspense fallback = {<LoadingIndicator/>}>
-           
+        <>
+        {status == DataState.LOADED
+        ?<Suspense fallback={<LoadingIndicator/>}>
             <Canvas dpr={1} shadows={true} >
                 <group>
                     <OrbitControls
@@ -39,21 +46,21 @@ const AttractionScene: React.FC = () => {
                         minDistance={2}
                         enablePan={false}
                     ></OrbitControls>
-
-                    <PopupCloud popups = {attraction.information} radius = {5} center = {new Vector3(0, -1, 0)}/>
+                    <PopupCloud popups={attraction.information} radius={5} center={new Vector3(0, -1, 0)} />
                     <Stage></Stage>
-                    <mesh scale={1/19000} position={[0, -1.6, 0]} castShadow receiveShadow>
-                        <LowPolyModel path = {attraction.highPolyModelPath}></LowPolyModel>
+                    <mesh scale={1 / 19000} position={[0, -1.6, 0]} castShadow receiveShadow>
+                        <LowPolyModel path={data!.href}></LowPolyModel>
                     </mesh>
                 </group>
             </Canvas>
             <SceneTitle
                 back={() => navigate('/')}
                 title={attraction.title}
-                subtitle= {attraction?.subtitle}
-                location= {attraction.location}
-            />
+                subtitle={attraction?.subtitle}
+                location={attraction.location} />
         </Suspense>
+        :<LoadingIndicator/>}
+        </>
     );
 }
 

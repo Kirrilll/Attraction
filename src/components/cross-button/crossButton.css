@@ -8,6 +8,7 @@
   --aa: 1px;
   --color: #FEFEFE;
   border-radius: 3px;
+  cursor: pointer;
   background: linear-gradient(45deg, transparent calc(50% - var(--weight) - var(--aa)),
                                var(--color) calc(50% - var(--weight)), var(--color) calc(50% + var(--weight)), 
                                transparent calc(50% + var(--weight) + var(--aa))), 

@@ -6,6 +6,7 @@ import './popup.css'
 import BUILDING_ICON from '../../../assets/images/building_icon.png'
 import INTERESTING_ICON from '../../../assets/images/interestingFacts_icon.png'
 import GENERAL_ICON from '../../../assets/images/generalFacts_icon.png'
+import CrossButton from '../../cross-button/crossButton';
 
 
 const Popup: React.FC<IPopupProp> = (props) => {
@@ -13,7 +14,6 @@ const Popup: React.FC<IPopupProp> = (props) => {
     const [isActive, setIsActive] = useState<Boolean>(false);
 
     const iconPath = () => {
-        console.log(props.type);
         switch (props.type) {
             case PopupInfoType.BUILDING:
                 return BUILDING_ICON;//'assets/images/building_icon.png';
@@ -25,16 +25,22 @@ const Popup: React.FC<IPopupProp> = (props) => {
     };
 
     
+    const onClick = () =>{
+        if(!isActive)
+            setIsActive(true)
+    }
 
     const active = isActive ? 'active' : '';
-
     const popapTitleClass = isActive? 'popup-title--active': 'popup-title'
 
     return (
         <Html occlude transform>
-            <div className={popapTitleClass} onClick={() => setIsActive(true)}>
+            <div className={popapTitleClass} onClick={onClick}>
                 <img src={iconPath()} />
-                <div className={`popup-title__text ${active}`}>{props.title}</div>
+                <div className={`popup-title__text ${active}`}>
+                    {props.title}
+                    <CrossButton action={() => setIsActive(false)}></CrossButton>
+                </div>
                 <div className={`popup__body ${active}`}>
                     <Scrollable>
                         <div style={{maxHeight:'300px'}}>

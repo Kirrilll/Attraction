@@ -45,7 +45,8 @@
 }
 
 .popup-title__text.active {
-    display: block;
+    display: flex;
+    justify-content: space-between;
 }
 
 .popup__body {

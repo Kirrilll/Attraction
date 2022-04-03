@@ -16,10 +16,11 @@ const NavPanelItem: React.FC<INavPanelItemProp> = (props) => {
     const [isHovered, setIsHovered] = useState<boolean>(false);
 
     //Расчет всего здесь
-
     const rotateEarth = () => {
-        const x = GeometryHelper.degToRad(props.navPanelItem.coordinates.latitude - 90);
-        const y = GeometryHelper.degToRad(props.navPanelItem.coordinates.longitude - 90);
+        const kLat =  45 * Math.sign(Math.round(props.navPanelItem.coordinates.latitude));
+        const kLon =  45 * Math.sign(Math.round(props.navPanelItem.coordinates.longitude));
+        const x = GeometryHelper.degToRad( 90 + kLat - props.navPanelItem.coordinates.latitude );
+        const y = GeometryHelper.degToRad(90 + kLon  -  props.navPanelItem.coordinates.longitude);
         props.setRotation(x, y);
     }
 

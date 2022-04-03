@@ -69,6 +69,18 @@ export interface IPopupProp {
   type: PopupInfoType
 }
 
+export interface IDiskData{
+  href: string,
+  method: string,
+  templated: boolean
+}
+
+export enum DataState{
+  LOADING,
+  LOADED,
+  ERROR
+}
+
 export enum PopupInfoType{
   BUILDING,
   INTERESTING,

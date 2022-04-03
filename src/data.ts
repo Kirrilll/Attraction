@@ -44,7 +44,7 @@ export const dataNavs: Array<IAttractionNav> = [
 export const dataHigh: Array<IAttractionHigh> = [
     {
         id: 0,
-        highPolyModelPath: 'https://downloader.disk.yandex.ru/disk/3cad63586f8fbf4b21b5a80d3240799d3d93c6cdb4dd3869542992debdc1ffb9/6248f28f/q0VXBEFBkYltsRj2H9525LvfVBYydytrbmSPRhx9rluu9T_ih2XSMISZXRz1Z8uw17aZdV_Nue0y7mnQIOozVw%3D%3D?uid=1200320564&filename=pisa.gltf&disposition=attachment&hash=&limit=0&content_type=text%2Fplain&owner_uid=1200320564&fsize=19650467&hid=b773234240d9e7a51efa1ac67a4fbc56&media_type=text&tknv=v2&etag=5110d19fbe40be601fbdeadbaf45a73d',
+        highPolyModelPath: 'https://cloud-api.yandex.net/v1/disk/resources/download?path=%2F%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%2FAttraction%2Fpisa.gltf',
         information: [
             {
                 title: 'Строительство',
@@ -67,7 +67,7 @@ export const dataHigh: Array<IAttractionHigh> = [
     },
     {
         id: 1,
-        highPolyModelPath: 'https://downloader.disk.yandex.ru/disk/3cad63586f8fbf4b21b5a80d3240799d3d93c6cdb4dd3869542992debdc1ffb9/6248f28f/q0VXBEFBkYltsRj2H9525LvfVBYydytrbmSPRhx9rluu9T_ih2XSMISZXRz1Z8uw17aZdV_Nue0y7mnQIOozVw%3D%3D?uid=1200320564&filename=pisa.gltf&disposition=attachment&hash=&limit=0&content_type=text%2Fplain&owner_uid=1200320564&fsize=19650467&hid=b773234240d9e7a51efa1ac67a4fbc56&media_type=text&tknv=v2&etag=5110d19fbe40be601fbdeadbaf45a73d',
+        highPolyModelPath: 'https://cloud-api.yandex.net/v1/disk/resources/download?path=%2F%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%2FAttraction%2Fpisa.gltf',
         information: [
             {
                 title: 'Строительство',
@@ -90,7 +90,7 @@ export const dataHigh: Array<IAttractionHigh> = [
     },
     {
         id: 2,
-        highPolyModelPath: 'https://downloader.disk.yandex.ru/disk/3cad63586f8fbf4b21b5a80d3240799d3d93c6cdb4dd3869542992debdc1ffb9/6248f28f/q0VXBEFBkYltsRj2H9525LvfVBYydytrbmSPRhx9rluu9T_ih2XSMISZXRz1Z8uw17aZdV_Nue0y7mnQIOozVw%3D%3D?uid=1200320564&filename=pisa.gltf&disposition=attachment&hash=&limit=0&content_type=text%2Fplain&owner_uid=1200320564&fsize=19650467&hid=b773234240d9e7a51efa1ac67a4fbc56&media_type=text&tknv=v2&etag=5110d19fbe40be601fbdeadbaf45a73d',
+        highPolyModelPath: 'https://cloud-api.yandex.net/v1/disk/resources/download?path=%2F%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%2FAttraction%2Fpisa.gltf',
         information: [
             {
                 title: 'Строительство',
@@ -113,7 +113,7 @@ export const dataHigh: Array<IAttractionHigh> = [
     },
     {
         id: 3,
-        highPolyModelPath: 'https://downloader.disk.yandex.ru/disk/3cad63586f8fbf4b21b5a80d3240799d3d93c6cdb4dd3869542992debdc1ffb9/6248f28f/q0VXBEFBkYltsRj2H9525LvfVBYydytrbmSPRhx9rluu9T_ih2XSMISZXRz1Z8uw17aZdV_Nue0y7mnQIOozVw%3D%3D?uid=1200320564&filename=pisa.gltf&disposition=attachment&hash=&limit=0&content_type=text%2Fplain&owner_uid=1200320564&fsize=19650467&hid=b773234240d9e7a51efa1ac67a4fbc56&media_type=text&tknv=v2&etag=5110d19fbe40be601fbdeadbaf45a73d',
+        highPolyModelPath: 'https://cloud-api.yandex.net/v1/disk/resources/download?path=%2F%D0%9F%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%2FAttraction%2Fpisa.gltf',
         information: [
             {
                 title: 'Строительство',
