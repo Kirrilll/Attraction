@@ -34,7 +34,6 @@ const AttractionScene: React.FC = () => {
         [params]
     );
 
-
     return (
         <>
         {status == DataState.LOADED
@@ -48,7 +47,7 @@ const AttractionScene: React.FC = () => {
                     ></OrbitControls>
                     <PopupCloud popups={attraction.information} radius={5} center={new Vector3(0, -1, 0)} />
                     <Stage></Stage>
-                    <mesh scale={1 / 19000} position={[0, -1.6, 0]} castShadow receiveShadow>
+                    <mesh scale={1 / attraction.size} position={attraction.position} castShadow receiveShadow>
                         <LowPolyModel path={data!.href}></LowPolyModel>
                     </mesh>
                 </group>

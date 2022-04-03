@@ -48,6 +48,7 @@ export interface INavPanelContainer{
 export interface IAttractionNav {
   idHigh: number
   title: string;
+  scale:number;
   coordinates: ICoordinates;
   lowPolyModelPath: string;
   flagDefaultPath: string;
@@ -60,7 +61,9 @@ export interface IAttractionHigh{
   highPolyModelPath: string;
   title: string;
   subtitle?: string;
-  location: string
+  location: string,
+  size:number,
+  position: [number,number,number]
 }
 
 export interface IPopupProp {
