@@ -34,10 +34,12 @@ const AttractionScene: React.FC = () => {
         [params]
     );
 
+    const loadingCatCache = <LoadingIndicator/>
+
     return (
         <>
         {status == DataState.LOADED
-        ?<Suspense fallback={<LoadingIndicator/>}>
+        ?<Suspense fallback={loadingCatCache}>
             <Canvas dpr={1} shadows={true} >
                 <group>
                     <OrbitControls
@@ -58,7 +60,7 @@ const AttractionScene: React.FC = () => {
                 subtitle={attraction?.subtitle}
                 location={attraction.location} />
         </Suspense>
-        :<LoadingIndicator/>}
+        :loadingCatCache}
         </>
     );
 }
